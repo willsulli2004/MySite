@@ -94,31 +94,35 @@ window.PROJECTS = [
       {
         heading: "Inspiration",
         body: `
-Write-up coming soon.
+My inspiration for this project actually came from a youtube video a came across where some guy designed his own custom Split flap. I felt that this project was a good chance to test my 3D design skills as well as my electrical and programming skills. 
+The build I saw for this had flaps with just letters symbols and some colors. I wanted to make flaps that had logos of my favorite teams that way I can use the display to automatically display active games from my favorite teams
 `,
       },
       {
         heading: "PCB design",
         body: `
-Write-up coming soon.
+For the PCB design I used Fusion360. This made it easy to quickly add the 3D modles of the pcb into my assembly so that I can properly build arouind it.
+I initally built 1 pcb to control a motor and then daisy chained wires so that each pcb can extract the information for its motor and pass along the rest. After testing this I realized it would be much easier and efficient to use gold fingers/edge connectors
+This led to my final PCB designs being a motor controlling PCB that could be slotted into my backplane PCB. Each motor controller uses a 74HC595 shift register to extract the information needed from the microcontroller and pass the rest of the information down the line. the backplane carries a LATCH signal that when pulsed shift register’s outputs drive a ULN2003A Darlington array to step the motor where needed
 `,
       },
       {
         heading: "Getting one flap working",
         body: `
-Write-up coming soon.
+My initial goal was to get 1 flap working so that I could get a sense of the dimensions each module would need. after this I would then need to scale my model up to handle 15 moduels
 `,
       },
       {
         heading: "Scaling to a row of 15",
         body: `
-Write-up coming soon.
+Currently I am in the process of scaling this design to fit 15 split flaps in 1 row. This is challenging since all I have for manufacturing a Creality KC1 with a 220x220x250mm build volume. 
+One goal when scaling this is to make it so that the design can be on the way to being professionally manufactured. This has led to a much more modular approach which should help with this being a straightforward assembly
 `,
       },
       {
         heading: "Challenges so far",
         body: `
-Write-up coming soon.
+The main challenge for this project has been keeping the design compact but also large enough that I can fit 45 flaps in each drum. This was the first initial problem as the more flaps each drum has the larger you need to make it and the larger that makes a whole module
 `,
       },
     ],
