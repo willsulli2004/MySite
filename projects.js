@@ -63,8 +63,7 @@ window.PROJECTS = [
       { type: "image", src: "media/split-flap/cover.webp", caption: "Display build" },
       { type: "image", src: "media/split-flap/motor-controller-pcb.webp", caption: "Motor controller PCB: 74HC595 shift register, ULN2003A driver and hall effect sensor input, with a card-edge connector" },
       { type: "image", src: "media/split-flap/backplane-pcb.webp", caption: "Backplane PCB with a motor controller plugged into one of its card-edge slots" },
-      // PLACEHOLDER: single-flap.gif is a stand-in. Overwrite media/split-flap/single-flap.gif with the real GIF.
-      { type: "image", src: "media/split-flap/single-flap.gif", caption: "A single flap assembly running" },
+      { type: "image", src: "media/split-flap/single-flap.gif", caption: "Exploded view of a single flap module: stepper motor, flap drum, motor controller PCB and housing" },
     ],
     // EDIT ME: list the actual parts now that the components are finalized.
     hardware: ["45 stepper motors", "Custom motor controller PCB", "Custom backplane PCB", "3D-printed enclosure and flaps", "Microcontroller (TBD)"],
