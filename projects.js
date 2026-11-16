@@ -61,26 +61,40 @@ window.PROJECTS = [
     links: [{ label: "GitHub", url: "https://github.com/willsulli2004" }],
     media: [
       { type: "image", src: "media/split-flap/cover.webp", caption: "Display build" },
+      // PLACEHOLDERS: the next three files are stand-in images. Overwrite each file in
+      // media/split-flap/ with the real one (keep the same file name) and edit the captions.
+      { type: "image", src: "media/split-flap/motor-controller-pcb.webp", caption: "Motor controller PCB" },
+      { type: "image", src: "media/split-flap/backplane-pcb.webp", caption: "Backplane PCB" },
+      { type: "image", src: "media/split-flap/single-flap.gif", caption: "A single flap assembly running" },
     ],
-    hardware: ["45 stepper motors", "Custom PCBs", "3D-printed enclosure and flaps", "Microcontroller (TBD)"],
+    // EDIT ME: list the actual parts now that the components are finalized.
+    hardware: ["45 stepper motors", "Custom motor controller PCB", "Custom backplane PCB", "3D-printed enclosure and flaps", "Microcontroller (TBD)"],
     software: ["TBD"],
-    // EDIT ME: these checklist items are placeholders — replace with where the build actually stands.
     progress: {
       updated: "2026-11-16",
+      summary: "The electronics are proven and one flap works end to end. The hard part now is scaling: a row of 15 flaps is wider than my printer's 220 x 220 x 250 mm build volume, so the row has to be modeled in pieces that print separately and still line up when assembled.",
       done: [
-        "Enclosure and flap mechanism modeled in CAD",
-        "Custom driver PCB designed",
+        "All components selected and finalized",
+        "Motor controller PCB designed and fabricated",
+        "Motor controller PCB tested",
+        "Backplane PCB designed and fabricated",
+        "Backplane PCB tested",
+        "Single flap assembly working",
       ],
       todo: [
-        "Choose the microcontroller",
-        "Assemble and test all 45 modules",
+        { text: "Model a row of 15 flaps", note: "Has to be split to fit a 220 x 220 x 250 mm build volume" },
+        "Print and assemble the first row of 15",
         "Firmware for homing and character lookup",
-        "Final enclosure print and wiring",
+        "Build the remaining rows and final assembly of all 45 flaps",
       ],
     },
     updates: [],
+    // EDIT ME: fill in each body. Blank line = new paragraph, "- " at line start = bullet.
     sections: [
       { heading: "Inspiration", body: "Write-up coming soon." },
+      { heading: "PCB design", body: "Write-up coming soon." },
+      { heading: "Getting one flap working", body: "Write-up coming soon." },
+      { heading: "Scaling to a row of 15", body: "Write-up coming soon." },
       { heading: "Challenges so far", body: "Write-up coming soon." },
     ],
   },
