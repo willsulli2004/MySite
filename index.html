@@ -1,221 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>William Sullivan — Computer Engineering Portfolio</title>
 <meta name="description" content="Embedded systems, LED installations, and ML projects by William Sullivan, Computer Engineering student in Las Vegas, NV.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
-<script src="./image-slot.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<style>
-html,body{margin:0;padding:0;background:#0b0b0e;color:#e8e6ec;font-family:Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
-*{box-sizing:border-box}
-a{color:#f04fa5;text-decoration:none}
-a:hover{color:#ff7cc0}
-::selection{background:#f04fa5;color:#0b0b0e}
-@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 6px 1px #f04fa5}50%{opacity:.55;box-shadow:0 0 2px 0 #f04fa5}}
-</style>
-</helmet>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body id="top">
+<div class="page">
+  <header class="site-header" id="site-header"></header>
 
-<div style="min-height:100vh;display:flex;flex-direction:column;background-image:radial-gradient(circle at 1px 1px,#1c1a22 1px,transparent 0);background-size:28px 28px">
-
-  <header style="position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px clamp(20px,5vw,64px);background:rgba(11,11,14,.82);backdrop-filter:blur(10px);border-bottom:1px solid #1d1b22">
-    <a href="#home" style="display:flex;align-items:center;gap:10px;color:#e8e6ec;font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.02em">
-      <span style="width:8px;height:8px;border-radius:50%;background:#f04fa5;box-shadow:0 0 6px 1px #f04fa5;display:inline-block"></span>
-      {{ name }}
-    </a>
-    <nav style="display:flex;gap:clamp(16px,3vw,32px);font-size:14px;font-weight:500">
-      <a href="#about" style="color:#a8a4b3" style-hover="color:#e8e6ec">About</a>
-      <a href="#projects" style="color:#a8a4b3" style-hover="color:#e8e6ec">Projects</a>
-      <a href="#contact" style="color:#a8a4b3" style-hover="color:#e8e6ec">Contact</a>
-    </nav>
-  </header>
-
-  <main id="home" style="flex:1;width:100%;max-width:1040px;margin:0 auto;padding:0 clamp(20px,5vw,64px)">
-
-    <section id="about" data-screen-label="About" style="padding:clamp(72px,14vh,140px) 0 clamp(56px,10vh,96px);display:grid;gap:28px">
-      <div style="display:flex;align-items:center;gap:10px;font-family:'DM Mono',monospace;font-size:13px;color:#f04fa5;letter-spacing:.06em">
-        <span style="width:6px;height:6px;border-radius:50%;background:#f04fa5;animation:pulse 2.4s ease-in-out infinite;display:inline-block"></span>
-        LAS VEGAS, NV · SENIOR, COMPUTER ENGINEERING
-      </div>
-      <h1 style="margin:0;font-size:clamp(38px,7vw,76px);line-height:1.02;font-weight:800;letter-spacing:-.03em;max-width:14ch;text-wrap:balance">Hardware that thinks, lights that respond.</h1>
-      <p style="margin:0;max-width:56ch;font-size:clamp(17px,2vw,20px);line-height:1.55;color:#a8a4b3;text-wrap:pretty">I'm {{ name }}, a senior Computer Engineering student at UNLV. I enjoy embedded system projects where I can combine my skills of 3D modeling and PCB design with my knowledge of microcontrollers, software, and circuit design. I also like building sports prediction models to combine my love of sports with my knowledge in machine learning. Below are some of the projects I have completed along with some that are in progress.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;padding-top:6px">
-        <a href="#projects" style="display:inline-flex;align-items:center;padding:12px 20px;border-radius:6px;background:#f04fa5;color:#0b0b0e;font-weight:600;font-size:15px" style-hover="background:#ff7cc0;color:#0b0b0e">See projects</a>
-        <a href="#contact" style="display:inline-flex;align-items:center;padding:12px 20px;border-radius:6px;border:1px solid #2a2731;color:#e8e6ec;font-weight:600;font-size:15px" style-hover="border-color:#f04fa5;color:#e8e6ec">Get in touch</a>
+  <main class="wrap">
+    <section id="about" class="hero">
+      <div class="eyebrow"><span class="pulse"></span>Las Vegas, NV · Senior, Computer Engineering</div>
+      <h1>Hardware that thinks, lights that respond.</h1>
+      <p class="lede">I'm <span data-name>William Sullivan</span>, a senior Computer Engineering student at UNLV. I enjoy embedded system projects where I can combine my skills of 3D modeling and PCB design with my knowledge of microcontrollers, software, and circuit design. I also like building sports prediction models to combine my love of sports with my knowledge in machine learning. Below are some of the projects I have completed along with some that are in progress.</p>
+      <div class="row">
+        <a class="btn btn-primary" href="#projects">See projects</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
       </div>
     </section>
 
-    <section id="projects" data-screen-label="Projects" style="padding:clamp(40px,8vh,80px) 0;border-top:1px solid #1d1b22">
-      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:32px">
-        <h2 style="margin:0;font-size:clamp(26px,3.5vw,36px);font-weight:800;letter-spacing:-.02em">Projects</h2>
-        <span style="font-family:'DM Mono',monospace;font-size:13px;color:#6f6b7a">{{ projectCount }} shown</span>
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2 class="h2">Projects</h2>
+        <span class="count" id="count"></span>
       </div>
-      <div role="tablist" style="display:flex;gap:4px;margin-bottom:28px;border-bottom:1px solid #1d1b22">
-        <button role="tab" onClick="{{ showFinished }}" style="appearance:none;background:none;border:0;border-bottom:2px solid {{ finishedBorder }};margin-bottom:-1px;padding:10px 14px;font-family:Manrope,system-ui,sans-serif;font-size:15px;font-weight:600;color:{{ finishedColor }};cursor:pointer" style-hover="color:#e8e6ec">Finished</button>
-        <button role="tab" onClick="{{ showProgress }}" style="appearance:none;background:none;border:0;border-bottom:2px solid {{ progressBorder }};margin-bottom:-1px;padding:10px 14px;font-family:Manrope,system-ui,sans-serif;font-size:15px;font-weight:600;color:{{ progressColor }};cursor:pointer" style-hover="color:#e8e6ec">In progress</button>
+      <div class="tabs" role="tablist">
+        <button class="tab" role="tab" data-tab="finished" aria-selected="true">Finished</button>
+        <button class="tab" role="tab" data-tab="progress" aria-selected="false">In progress</button>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px">
-        <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
-          <article onClick="{{ p.open }}" role="button" tabIndex="0" style="display:flex;flex-direction:column;border:1px solid #1d1b22;border-radius:10px;background:#111015;overflow:hidden;cursor:pointer;transition:border-color .2s,transform .2s" style-hover="border-color:#f04fa5;transform:translateY(-3px)">
-            <div onClick="{{ stop }}" style="position:relative;aspect-ratio:16/10;background:#131118;border-bottom:1px solid #1d1b22;cursor:default">
-              <image-slot id="{{ p.slotId }}" shape="rect" placeholder="{{ p.imageNote }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
-            </div>
-            <div style="display:flex;flex-direction:column;gap:14px;padding:20px;flex:1">
-              <h3 style="margin:0;font-size:19px;font-weight:600;letter-spacing:-.01em">{{ p.title }}</h3>
-              <p style="margin:0;font-size:15px;line-height:1.5;color:#a8a4b3;text-wrap:pretty">{{ p.description }}</p>
-              <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:auto">
-                <sc-for list="{{ p.tags }}" as="t" hint-placeholder-count="3">
-                  <span style="font-family:'DM Mono',monospace;font-size:11.5px;padding:4px 8px;border-radius:4px;background:#1a1720;color:#c9c5d2;border:1px solid #26232d;white-space:nowrap">{{ t }}</span>
-                </sc-for>
-              </div>
-              <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:4px;font-size:14px;font-weight:600">
-                <span style="color:#6f6b7a">Details →</span>
-                <sc-if value="{{ p.hasGithub }}" hint-placeholder-val="{{ true }}">
-                  <a href="{{ p.github }}" target="_blank" rel="noopener" onClick="{{ stop }}" style="display:inline-flex;align-items:center;gap:6px;color:#f04fa5" style-hover="color:#ff7cc0">GitHub <span style="font-family:'DM Mono',monospace">↗</span></a>
-                </sc-if>
-              </div>
-            </div>
-          </article>
-        </sc-for>
-      </div>
+      <div class="grid" id="grid"></div>
     </section>
 
-    <sc-if value="{{ hasActive }}" hint-placeholder-val="{{ false }}">
-      <div onClick="{{ close }}" style="position:fixed;inset:0;z-index:50;background:rgba(11,11,14,.6);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:clamp(12px,3vw,40px)">
-        <div role="dialog" aria-modal="true" onClick="{{ stop }}" style="width:100%;max-width:960px;max-height:100%;overflow:auto;background:#111015;border:1px solid #2a2731;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.6)">
-          <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid #1d1b22;position:sticky;top:0;background:#111015;z-index:1">
-            <span style="font-family:'DM Mono',monospace;font-size:12px;color:#f04fa5;letter-spacing:.06em">{{ active.statusLabel }}</span>
-            <button onClick="{{ close }}" aria-label="Close" style="appearance:none;background:none;border:1px solid #2a2731;border-radius:6px;color:#a8a4b3;width:34px;height:34px;font-size:18px;line-height:1;cursor:pointer" style-hover="border-color:#f04fa5;color:#e8e6ec">×</button>
-          </div>
-          <div style="padding:clamp(20px,4vw,40px);display:grid;gap:32px">
-            <div style="display:grid;gap:16px">
-              <h2 style="margin:0;font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.1">{{ active.title }}</h2>
-              <p style="margin:0;font-size:17px;line-height:1.55;color:#a8a4b3;max-width:64ch;text-wrap:pretty">{{ active.description }}</p>
-              <div style="display:flex;flex-wrap:wrap;gap:12px;font-size:14px;font-weight:600">
-                <sc-if value="{{ active.hasGithub }}" hint-placeholder-val="{{ true }}"><a href="{{ active.github }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:6px;background:#f04fa5;color:#0b0b0e" style-hover="background:#ff7cc0;color:#0b0b0e">GitHub ↗</a></sc-if>
-                <sc-if value="{{ active.hasFiles }}" hint-placeholder-val="{{ false }}">
-                  <a href="{{ active.files }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:6px;border:1px solid #2a2731;color:#e8e6ec" style-hover="border-color:#f04fa5;color:#e8e6ec">3D files ↗</a>
-                </sc-if>
-              </div>
-            </div>
-            <div style="position:relative;aspect-ratio:16/10;max-height:70vh;border-radius:10px;overflow:hidden;background:#131118;border:1px solid #1d1b22">
-              <image-slot id="{{ active.slotId }}" shape="rect" fit="contain" placeholder="{{ active.imageNote }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
-            </div>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:24px 40px">
-              <div style="display:grid;gap:10px">
-                <h4 style="margin:0;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;color:#f04fa5;text-transform:uppercase">Hardware</h4>
-                <ul style="margin:0;padding-left:18px;font-size:15px;line-height:1.6;color:#c9c5d2;display:grid;gap:4px">
-                  <sc-for list="{{ active.hardware }}" as="h" hint-placeholder-count="3"><li>{{ h }}</li></sc-for>
-                </ul>
-              </div>
-              <div style="display:grid;gap:10px">
-                <h4 style="margin:0;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;color:#f04fa5;text-transform:uppercase">Software &amp; languages</h4>
-                <ul style="margin:0;padding-left:18px;font-size:15px;line-height:1.6;color:#c9c5d2;display:grid;gap:4px">
-                  <sc-for list="{{ active.software }}" as="s" hint-placeholder-count="3"><li>{{ s }}</li></sc-for>
-                </ul>
-              </div>
-            </div>
-            <div style="display:grid;gap:28px;border-top:1px solid #1d1b22;padding-top:28px">
-              <div style="display:grid;gap:8px">
-                <h4 style="margin:0;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;color:#f04fa5;text-transform:uppercase">Inspiration</h4>
-                <p style="margin:0;font-size:16px;line-height:1.6;color:#c9c5d2;max-width:70ch;text-wrap:pretty">{{ active.inspiration }}</p>
-              </div>
-              <div style="display:grid;gap:8px">
-                <h4 style="margin:0;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;color:#f04fa5;text-transform:uppercase">What I learned</h4>
-                <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #c9c5d2; max-width: 70ch; text-wrap: pretty">{{ active.learned }}</p>
-              </div>
-              <div style="display:grid;gap:8px">
-                <h4 style="margin:0;font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.08em;color:#f04fa5;text-transform:uppercase">What I'd do differently</h4>
-                <p style="margin:0;font-size:16px;line-height:1.6;color:#c9c5d2;max-width:70ch;text-wrap:pretty">{{ active.differently }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </sc-if>
-
-    <section id="contact" data-screen-label="Contact" style="padding:clamp(48px,10vh,96px) 0 clamp(64px,12vh,120px);border-top:1px solid #1d1b22;display:grid;gap:24px">
-      <h2 style="margin:0;font-size:clamp(26px,3.5vw,36px);font-weight:800;letter-spacing:-.02em">Contact</h2>
-      <p style="margin:0;max-width:48ch;font-size:17px;line-height:1.55;color:#a8a4b3;text-wrap:pretty">Open to embedded, hardware, and ML roles starting after graduation. The fastest way to reach me is email.</p>
-      <div style="display:flex;flex-direction:column;gap:2px;max-width:520px;font-family:'DM Mono',monospace;font-size:15px">
-        <a href="{{ links.github }}" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid #1d1b22;color:#e8e6ec" style-hover="color:#f04fa5"><span style="color:#6f6b7a">GitHub</span><span>{{ links.githubLabel }} ↗</span></a>
-        <a href="{{ links.linkedin }}" target="_blank" rel="noopener" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid #1d1b22;color:#e8e6ec" style-hover="color:#f04fa5"><span style="color:#6f6b7a">LinkedIn</span><span>{{ links.linkedinLabel }} ↗</span></a>
-        <a href="{{ links.email }}" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid #1d1b22;color:#e8e6ec" style-hover="color:#f04fa5"><span style="color:#6f6b7a">Email</span><span>{{ links.emailLabel }}</span></a>
-      </div>
+    <section id="contact" class="contact">
+      <h2 class="h2">Contact</h2>
+      <p class="lede" style="max-width:48ch;font-size:17px">Open to embedded, hardware, and ML roles starting after graduation. The fastest way to reach me is email.</p>
+      <div class="contact-list" id="contact-list"></div>
     </section>
   </main>
 
-  <footer style="padding:24px clamp(20px,5vw,64px);border-top:1px solid #1d1b22;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'DM Mono',monospace;font-size:12px;color:#6f6b7a">
-    <span>© 2026 {{ name }}</span>
-    <span>Las Vegas, NV</span>
-  </footer>
+  <footer class="site-footer" id="site-footer"></footer>
 </div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;name&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;William Sullivan&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;handle&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;willsulli2004&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;},&quot;email&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;sulliw2@unlv.nevada.edu&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identity&quot;}}">
-class Component extends DCLogic {
-  state = { tab: "finished", active: null };
-  componentDidMount() {
-    this._key = (e) => { if (e.key === "Escape" && this.state.active) this.setState({ active: null }); };
-    window.addEventListener("keydown", this._key);
-  }
-  componentWillUnmount() { window.removeEventListener("keydown", this._key); }
-  renderVals() {
-    const tab = this.state.tab;
-    const TBD = "Write-up coming soon.";
-    const name = this.props.name ?? "William Sullivan";
-    const handle = this.props.handle ?? "willsulli2004";
-    const inProgress = [
-      { title: "Split Flap Display", imageNote: "photo: display build", description: "A split flap display built from scratch. 3D-modeled enclosure and custom PCBs to control all 45 motors from a single microcontroller.", tags: ["PCB Design", "3D Printing", "Stepper Motors", "Embedded"], github: "https://github.com/" + handle,
-        hardware: ["45 stepper motors", "Custom PCBs", "3D-printed enclosure and flaps", "Microcontroller (TBD)"], software: ["TBD"], files: "", inspiration: TBD, learned: TBD, differently: TBD },
-    ];
-    const finished = [
-      { title: "March Madness Machine Learning Model", imageNote: "image: predicted bracket", description: "XGBoost, logistic regression, neural network, and random forest models predicting NCAA Men's basketball matchups and outputting a full bracket. 74.6% of games correct in 2026, 77.7% in 2025, with both champions predicted correctly.", tags: ["Python", "XGBoost", "scikit-learn", "Neural Networks"], github: "https://github.com/willsulli2004/March-Madness-ML",
-        hardware: ["Personal computer (CPU training)"], software: ["Python", "XGBoost", "scikit-learn", "Neural network / random forest / logistic regression models"],
-        inspiration: "Every year me and my family compete in a pool against each other to see who has the best bracket. For the 2026 tournament I decided to step up my game by using my fairly new knowledge in machine learning to make my bracket.",
-        learned: "This project taught me a lot about machine learning and the data collection process. I learned a lot of the more intricate parts of data collection using pandas, specifically building a pipeline that normalizes names and stats across different data sources. I learned about where each type of model shines and how to combine their outputs for the most accurate predictions",
-        differently: "If I could do this project again I would want to get more into the data myself. While some of the stats I used were familiar to me, some of the more unique and more analytical stats were beyond my understanding of basketball. Spending more time understanding advanced basketball stats could have had lots of benefits to my model and could've led me to collecting/calculating some more advanced stats in my data collection pipeline." },
-      { title: "WS2811 LED Christmas Tree", imageNote: "photo: tree mid-scene", description: "WS2811 LED bulbs driven by a Raspberry Pi with custom scenes for a Christmas tree. Each bulb is mapped to an (x, y) coordinate, enabling sweeps top to bottom, side to side, and rotations around a central point.", tags: ["Raspberry Pi", "Python", "WS2811"], github: "https://github.com/willsulli2004/WS2811-LED-Christmas-Tree",
-        hardware: ["Raspberry Pi", "WS2811 LED bulb strings"], software: ["Python", "Homebridge"],
-        inspiration: "My inspiration for this video came from watching a youtube video where someone made their own Christmas decorations. It inspired me to do something similar with my Christmas tree",
-        learned: "This project taught me the correlation between basic 2 dimensional math and lighting scenes that come standard in many basic smart home lighting products. I also learned how to add my own products into my smart home and how to quickly deploy new scenes and controls for them",
-        differently: "If I could do this again I would try and incorporate a z dimension for even more robust scenes. I could do this by turning the tree as a map the lights, and/or by creating a function that maps the light level from each bulb into a z coordinate. The brighter the bulb the closer to the front of the tree it is." },
-      { title: "FPGA Blackjack", imageNote: "photo: DE2-115 board running the game", description: "A complete hardware implementation of a 2-deck Blackjack game written in VHDL for the Altera/Intel DE2-115 FPGA Development Board.", tags: ["VHDL", "FPGA", "DE2-115", "Quartus"], github: "https://github.com/willsulli2004/FPGA-BlackJack",
-        hardware: ["Altera/Intel DE2-115 FPGA board", "On-board switches, buttons, 7-segment displays and LEDs"], software: ["VHDL", "Intel Quartus Prime"],
-        inspiration: "This was one of my final projects for an FPGA class. My inspiration came from being born and raised in Vegas and my enjoyment of playing blackjack.",
-        learned: "This taught me just how complex games can be to translate into software. There are many rules that complicate the logic, such as aces being treated as 1 or 11 and dealers hitting on soft 17s.",
-        differently: "If I could do this again, the only difference I can think of would be to add more features. Since the board belonged to the school, I had to give it back afterward and did not get to add double down, insurance, or splitting." },
-      { title: "Automatic Card Shuffler and Dealer", imageNote: "photo: shuffler mid-deal", description: "Fully self-designed and 3D-printed mechanism that riffle shuffles a deck of cards and deals them one by one, controlled by an ESP32 microcontroller.", tags: ["ESP32", "C++", "3D Printing", "CAD"], github: "",
-        hardware: ["ESP32", "Stepper/DC motors and drivers", "Buck converter", "LCD screen", "3D-printed shuffler and dealer mechanism"], software: ["C++ (Arduino framework)", "Fusion 360"], files: "",
-        inspiration: "For this project I wanted to recreate the auto shufflers and dealers I had seen online. I wanted to see what all went into the mechanics of shuffling and dealing cards.",
-        learned: "This was my most mechanically intensive project so far. I learned a lot about 3D modeling and rebuilt my design from the ground up several times after discovering fundamental issues with previous prototypes. I learned the importance of modular designs and how much they helped with making changes and printing reliable parts.",
-        differently: "If I could do this again, I would do it completely differently and adopt a whole different shuffling mechanism. Modern auto shufflers do not riffle shuffle like this; instead they use software to generate a shuffled order and hardware to physically arrange the cards into it. This would make the design even more mechanically challenging, but it would look and function a lot better than what I made." },
-    ];
-    const slug = (t) => "img-" + t.toLowerCase().replace(/[^a-z0-9]+/g, "-");
-    const withOpen = (list, status) => list.map(p => { const full = { ...p, statusLabel: status, hasFiles: !!p.files, hasGithub: !!p.github, slotId: slug(p.title) }; return { ...full, open: () => this.setState({ active: full }) }; });
-    const projects = tab === "finished" ? withOpen(finished, "FINISHED PROJECT") : withOpen(inProgress, "IN PROGRESS");
-    const active = this.state.active;
-    const on = "#f04fa5", off = "transparent", onC = "#e8e6ec", offC = "#6f6b7a";
-    return {
-      name, handle, projects, projectCount: String(projects.length).padStart(2, "0"),
-      active: active || {}, hasActive: !!active, close: () => this.setState({ active: null }), stop: (e) => e.stopPropagation(),
-      showFinished: () => this.setState({ tab: "finished" }), showProgress: () => this.setState({ tab: "progress" }),
-      finishedBorder: tab === "finished" ? on : off, finishedColor: tab === "finished" ? onC : offC,
-      progressBorder: tab === "progress" ? on : off, progressColor: tab === "progress" ? onC : offC,
-      links: {
-        github: "https://github.com/" + handle, githubLabel: "github.com/" + handle,
-        linkedin: "https://linkedin.com/in/william-sullivan-963388274", linkedinLabel: "linkedin.com/in/william-sullivan-963388274",
-        email: "mailto:" + (this.props.email ?? "sulliw2@unlv.nevada.edu"), emailLabel: this.props.email ?? "sulliw2@unlv.nevada.edu",
-      },
-    };
-  }
-}
-</script>
+<script src="projects.js"></script>
+<script src="assets/site.js"></script>
+<script>Site.renderHome();</script>
 </body>
 </html>
