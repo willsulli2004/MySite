@@ -61,10 +61,9 @@ window.PROJECTS = [
     links: [{ label: "GitHub", url: "https://github.com/willsulli2004" }],
     media: [
       { type: "image", src: "media/split-flap/cover.webp", caption: "Display build" },
-      // PLACEHOLDERS: the next three files are stand-in images. Overwrite each file in
-      // media/split-flap/ with the real one (keep the same file name) and edit the captions.
-      { type: "image", src: "media/split-flap/motor-controller-pcb.webp", caption: "Motor controller PCB" },
-      { type: "image", src: "media/split-flap/backplane-pcb.webp", caption: "Backplane PCB" },
+      { type: "image", src: "media/split-flap/motor-controller-pcb.webp", caption: "Motor controller PCB: 74HC595 shift register, ULN2003A driver and hall effect sensor input, with a card-edge connector" },
+      { type: "image", src: "media/split-flap/backplane-pcb.webp", caption: "Backplane PCB with a motor controller plugged into one of its card-edge slots" },
+      // PLACEHOLDER: single-flap.gif is a stand-in. Overwrite media/split-flap/single-flap.gif with the real GIF.
       { type: "image", src: "media/split-flap/single-flap.gif", caption: "A single flap assembly running" },
     ],
     // EDIT ME: list the actual parts now that the components are finalized.
@@ -89,13 +88,39 @@ window.PROJECTS = [
       ],
     },
     updates: [],
-    // EDIT ME: fill in each body. Blank line = new paragraph, "- " at line start = bullet.
+    // WRITE-UP: replace the text between each pair of backticks ( ` ... ` ) with your own.
+    // Blank line = new paragraph. "- " at line start = bullet. **bold**, [text](https://link).
     sections: [
-      { heading: "Inspiration", body: "Write-up coming soon." },
-      { heading: "PCB design", body: "Write-up coming soon." },
-      { heading: "Getting one flap working", body: "Write-up coming soon." },
-      { heading: "Scaling to a row of 15", body: "Write-up coming soon." },
-      { heading: "Challenges so far", body: "Write-up coming soon." },
+      {
+        heading: "Inspiration",
+        body: `
+Write-up coming soon.
+`,
+      },
+      {
+        heading: "PCB design",
+        body: `
+Write-up coming soon.
+`,
+      },
+      {
+        heading: "Getting one flap working",
+        body: `
+Write-up coming soon.
+`,
+      },
+      {
+        heading: "Scaling to a row of 15",
+        body: `
+Write-up coming soon.
+`,
+      },
+      {
+        heading: "Challenges so far",
+        body: `
+Write-up coming soon.
+`,
+      },
     ],
   },
 
